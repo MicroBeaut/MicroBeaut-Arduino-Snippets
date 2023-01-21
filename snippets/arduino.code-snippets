@@ -1,0 +1,171 @@
+{
+    //--------------------------------------------------
+    //  New 
+    //--------------------------------------------------
+    "New": {
+        "prefix": "New",
+        "body": [
+            "void setup() {",
+            "\t$0",
+            "}",
+            "void loop() {",
+            "\t",
+            "}"
+        ],
+        "description": "Reads the value from a specified digital pin"
+    },
+    //--------------------------------------------------
+    //  Digiral I/O
+    //  Function:   digitalRead()
+    //--------------------------------------------------
+    "Digital Read": {
+        "prefix": "Digital Read",
+        "body": [
+            "digitalRead(${1:pinNumber});"
+        ],
+        "description": "Reads the value from a specified digital pin"
+    },
+    //--------------------------------------------------
+    //  Digiral I/O
+    //  Function:   digitalWrite()
+    //--------------------------------------------------
+    "Digital Write": {
+        "prefix": "Digital Write",
+        "body": [
+            "digitalWrite(${1:pinNumber}, ${2:value});"
+        ],
+        "description": "Write a HIGH or a LOW value to a digital pin"
+    },
+    //--------------------------------------------------
+    //  Digiral I/O
+    //  Function:   pinMode()
+    //--------------------------------------------------
+    "Pin Mode": {
+        "prefix": "Pin Mode",
+        "body": [
+            "pinMode(${1|INPUT,OUTPUT,INPUT_PULLUP|});"
+        ],
+        "description": "Configures the reference voltage used for digital input"
+    },
+    //--------------------------------------------------
+    //  Analog I/O
+    //  Function:   analogRead()
+    //--------------------------------------------------
+    "Analog Read": {
+        "prefix": "Analog Read",
+        "body": [
+            "analogRead(${1:analogPin});"
+        ],
+        "description": "Reads the value from the specified analog pin"
+    },
+    //--------------------------------------------------
+    //  Analog I/O
+    //  Function:   analogWrite()
+    //--------------------------------------------------
+    "Analog Write": {
+        "prefix": "Analog Write",
+        "body": [
+            "analogWrite(${1:analogPin}, ${2:value});"
+        ],
+        "description": "Writes an analog value (PWM wave) to a pin"
+    },
+    //--------------------------------------------------
+    //  Analog I/O
+    //  Function:   analogReference()
+    //--------------------------------------------------
+    "Analog Reference": {
+        "prefix": "Analog Reference",
+        "body": [
+            "analogReference(${1|DEFAULT,EXTERNAL,INTERNAL,INTERNAL1V1,INTERNAL2V56|});"
+        ],
+        "description": "Configures the reference voltage used for analog input"
+    },
+    //--------------------------------------------------
+    //  Zero, Due & MKR Family
+    //  Function:   analogReadResolution()
+    //--------------------------------------------------
+    "Analog Read Resolution": {
+        "prefix": "Analog Read Resolution",
+        "body": [
+            "analogReadResolution(${1|10,12,16,8|});"
+        ],
+        "description": "Sets the size (in bits) of the value returned by analogRead()"
+    },
+    //--------------------------------------------------
+    //  Zero, Due & MKR Family
+    //  Function:   analogWriteResolution()
+    //--------------------------------------------------
+    "Analog Write Resolution": {
+        "prefix": "Analog Write Resolution",
+        "body": [
+            "analogWriteResolution(${1|10,12,16,8|});"
+        ],
+        "description": "Sets the resolution of the analogWrite() function"
+    },
+    //--------------------------------------------------
+    //  Advanced I/O
+    //  Function:   noTone()
+    //--------------------------------------------------
+    "No Tone": {
+        "prefix": "No Tone",
+        "body": [
+            "noTone(${1:pinNumber});"
+        ],
+        "description": "Stops the generation of a square wave triggered"
+    },
+    //--------------------------------------------------
+    //  Advanced I/O
+    //  Function:   pulseIn()
+    //--------------------------------------------------
+    "Pulse In": {
+        "prefix": "pulse In",
+        "body": [
+            "pulseIn(${1:pinNumber}, ${2|HIGH,LOW|}${3:, ${4:timeout}});"
+        ],
+        "description": "Reads a pulse (either HIGH or LOW) on a pin"
+    },
+    //--------------------------------------------------
+    //  Advanced I/O
+    //  Function:   pulseInLong()
+    //--------------------------------------------------
+    "Pulse In Long": {
+        "prefix": "pulse In Long",
+        "body": [
+            "pulseInLong(${1:pinNumber}, ${2|HIGH,LOW|}${3:, ${4:timeout}});"
+        ],
+        "description": "Reads a pulse (either HIGH or LOW) on a pin"
+    },
+    //--------------------------------------------------
+    //  Advanced I/O
+    //  Function:   shiftIn()
+    //--------------------------------------------------
+    "Shift In": {
+        "prefix": "shift In",
+        "body": [
+            "shiftIn(${1:dataPin}, ${2:clockPin}, ${3|MSBFIRST,LSBFIRST|});"
+        ],
+        "description": "Shifts in a byte of data one bit at a time"
+    },
+    //--------------------------------------------------
+    //  Advanced I/O
+    //  Function:   shiftOut()
+    //--------------------------------------------------
+    "Shift Out": {
+        "prefix": "shift Out",
+        "body": [
+            "shiftOut(${1:dataPin}, ${2:clockPin}, ${3|MSBFIRST,LSBFIRST|}, ${4:value});"
+        ],
+        "description": "Shifts in a byte of data one bit at a time"
+    },
+    //--------------------------------------------------
+    //  Advanced I/O
+    //  Function:   tonte()
+    //--------------------------------------------------
+    "Tone...": {
+        "prefix": "tone",
+        "body": [
+            "shiftIn(${1:pinOu}, ${2:frequency}${3:, ${4:duration}});"
+        ],
+        "description": "Generates a square wave of the specified frequency (and 50% duty cycle) on a pin"
+    }
+}

@@ -1,0 +1,288 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Arduino",
+	"scopeName": "source.ino",
+	"patterns": [
+		{
+			"include": "#variable-qualifiers"
+		},
+		{
+			"include": "#variable-utilities"
+		},
+		{
+			"include": "#variable-constants"
+		},
+		{
+			"include": "#function-digital-io"
+		},
+		{
+			"include": "#function-analog-io"
+		},
+		{
+			"include": "#function-other-family"
+		},
+		{
+			"include": "#function-advanced-io"
+		},
+		{
+			"include": "#function-time"
+		},
+		{
+			"include": "#function-match"
+		},
+		{
+			"include": "#function-trigonometry"
+		},
+		{
+			"include": "#function-characters"
+		},
+		{
+			"include": "#function-random-numbers"
+		},
+		{
+			"include": "#function-bits-bytes"
+		},
+		{
+			"include": "#function-external-interrupts"
+		},
+		{
+			"include": "#function-interrupts"
+		},
+		{
+			"include": "#function-communication"
+		},
+		{
+			"include": "#function-usb"
+		},
+		{
+			"include": "#variable-datatypes"
+		},
+		{
+			"include": "#expression-operators"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"variable-qualifiers": {
+			"patterns": [
+				{
+					"name": "storage.type.arduino",
+					"match": "\\b(const|scope|static|volatile)\\b"
+				}
+			]
+		},
+		"variable-utilities": {
+			"patterns": [
+				{
+					"name": "storage.type.arduino",
+					"match": "\\b(PROGMEM|sizeof)\\b"
+				}
+			]
+		},
+		"variable-constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.arduino",
+					"match": "\\b(HIGH|LOW|true|false)\\b"
+				},
+				{
+					"name": "support.constant.digital.arduino",
+					"match": "\\b(INPUT|OUTPUT|INPUT_PULLUP|LED_BUILTIN)\\b"
+				},
+				{
+					"name": "constant.numeric.arduino",
+					"match": "-?\\b((0(b|B)[0-1]*)|(0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f)?\\b"
+				}
+			]
+		},
+		"variable-datatypes": {
+			"patterns": [
+				{
+					"name": "support.type.datatypes.arduino",
+					"match": "\\b(array|bool|boolean|byte|char|double|float|int|long|short|size_t|string|String|unsigned char|unsigned int|unsigned long|void|word)\\b"
+				}
+			]
+		},
+		"function-digital-io": {
+			"patterns": [
+				{
+					"name": "keyword.control.digital.arduino",
+					"match": "\\b(digitalRead|digitalWrite|pinMode)\\b"
+				}
+			]
+		},
+		"function-analog-io": {
+			"patterns": [
+				{
+					"name": "keyword.control.analog.arduino",
+					"match": "\\b(analogRead|analogWrite|analogReference)\\b"
+				},
+				{
+					"name": "variable.parameter.function.analog.reference.arduino",
+					"match": "\\b(DEFAULT|EXTERNAL|INTERNAL|INTERNAL1V1|INTERNAL2V56)\\b"
+				}
+			]
+		},
+		"function-other-family": {
+			"patterns": [
+				{
+					"name": "keyword.control.analog.resolution.arduino",
+					"match": "\\b(analogReadResolution|analogWriteResolution)\\b"
+				}
+			]
+		},
+		"function-advanced-io": {
+			"patterns": [
+				{
+					"name": "keyword.control.advanced.arduino",
+					"match": "\\b(noTone|pulseIn|pulseInLong|shiftIn|shiftOut|tone)\\b"
+				}
+			]
+		},
+		"function-time": {
+			"patterns": [
+				{
+					"name": "keyword.control.time.arduino",
+					"match": "\\b(delay|delayMicroseconds|micros|millis)\\b"
+				}
+			]
+		},
+		"function-match": {
+			"patterns": [
+				{
+					"name": "keyword.control.math.arduino",
+					"match": "\\b(abs|constrain|map|max|min|pow|sq|sqrt)\\b"
+				}
+			]
+		},
+		"function-trigonometry": {
+			"patterns": [
+				{
+					"name": "keyword.control.trigonometry.arduino",
+					"match": "\\b(cos|sin|tan)\\b"
+				}
+			]
+		},
+		"function-characters": {
+			"patterns": [
+				{
+					"name": "keyword.control.characters.arduino",
+					"match": "\\b(isAlpha|isAlphaNumeric|isAscii|isControl|isDigit|isGraph|isHexadecimalDigit|isLowerCase|isPrintable|isPunct|isSpace|isUpperCase|isWhitespace)\\b"
+				}
+			]
+		},
+		"function-random-numbers": {
+			"patterns": [
+				{
+					"name": "keyword.control.random.numbers.arduino",
+					"match": "\\b(random|randomSeed)\\b"
+				}
+			]
+		},
+		"function-bits-bytes": {
+			"patterns": [
+				{
+					"name": "keyword.control.bits.bytes.arduino",
+					"match": "\\b(bit|bitClear|bitRead|bitSet|bitWrite|highByte|lowByte)\\b"
+				}
+			]
+		},
+		"function-external-interrupts": {
+			"patterns": [
+				{
+					"name": "keyword.control.external.interrupts.arduino",
+					"match": "\\b(attachInterrupt|detachInterrupt)\\b"
+				}
+			]
+		},
+		"function-interrupts": {
+			"patterns": [
+				{
+					"name": "keyword.control.interrupts.arduino",
+					"match": "\\b(interrupts|noInterrupts)\\b"
+				}
+			]
+		},
+		"function-communication": {
+			"patterns": [
+				{
+					"name": "keyword.control.communication.arduino",
+					"match": "\\b(Serial|SPI|Stream|Wire)\\b"
+				}
+			]
+		},
+		"function-usb": {
+			"patterns": [
+				{
+					"name": "keyword.control.usb.arduino",
+					"match": "\\b(Keyboard|Mouse)\\b"
+				}
+			]
+		},
+		"expression-operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.assignment.compound.arduino",
+					"match": "\\*=|/=|%=|\\+=|-=|\\?\\?="
+				},
+				{
+					"name": "keyword.operator.assignment.compound.bitwise.arduino",
+					"match": "\\&=|\\^=|<<=|>>=|\\|="
+				},
+				{
+					"name": "keyword.operator.bitwise.shift.arduino",
+					"match": "<<|>>"
+				},
+				{
+					"name": "keyword.operator.comparison.arduino",
+					"match": "==|!="
+				},
+				{
+					"name": "keyword.operator.relational.arduino",
+					"match": "<=|>=|<|>"
+				},
+				{
+					"name": "keyword.operator.logical.arduino",
+					"match": "\\!|&&|\\|\\|"
+				},
+				{
+					"name": "keyword.operator.bitwise.arduino",
+					"match": "\\&|~|\\^|\\|"
+				},
+				{
+					"name": "keyword.operator.assignment.arduino",
+					"match": "\\="
+				},
+				{
+					"name": "keyword.operator.decrement.arduino",
+					"match": "--"
+				},
+				{
+					"name": "keyword.operator.increment.arduino",
+					"match": "\\+\\+"
+				},
+				{
+					"name": "keyword.operator.arithmetic.arduino",
+					"match": "%|\\*|/|-|\\+"
+				},
+				{
+					"name": "keyword.operator.null-coalescing.arduino",
+					"match": "\\?\\?"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.arduino",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.arduino",
+					"match": "\\\\."
+				}
+			]
+		}
+	}
+}

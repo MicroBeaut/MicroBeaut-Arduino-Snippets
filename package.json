@@ -1,0 +1,44 @@
+{
+  "name": "microbeaut-arduino-snippets",
+  "displayName": "MicroBeaut Arduino Snippets",
+  "description": "Code Snippets for Arduino",
+  "version": "0.0.1",
+  "publisher": "MicroBeaut",
+  "icon": "images/microbeaut-logo.png",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Snippets",
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "arduino",
+        "aliases": ["Arduino"],
+        "extensions": [".ino"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "arduino",
+        "scopeName": "source.ino",
+        "path": "./syntaxes/arduino.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "arduino",
+        "path": "./snippets/arduino.code-snippets"
+      }
+    ]
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MicroBeaut/MicroBeaut-Arduino-Snippets"
+  },
+  "qna": "https://github.com/MicroBeaut/MicroBeaut-Arduino-Snippets/discussions"
+}
