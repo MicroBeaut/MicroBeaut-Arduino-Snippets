@@ -2,7 +2,7 @@
   "name": "microbeaut-arduino-snippets",
   "displayName": "MicroBeaut Arduino Snippets",
   "description": "Code Snippets for Arduino",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "MicroBeaut",
   "icon": "images/microbeaut-logo.png",
   "engines": {

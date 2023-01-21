@@ -19,7 +19,7 @@
     //  Function:   digitalRead()
     //--------------------------------------------------
     "Digital Read": {
-        "prefix": "Digital Read",
+        "prefix": "digital Read",
         "body": [
             "digitalRead(${1:pinNumber});"
         ],
@@ -30,7 +30,7 @@
     //  Function:   digitalWrite()
     //--------------------------------------------------
     "Digital Write": {
-        "prefix": "Digital Write",
+        "prefix": "digital Write",
         "body": [
             "digitalWrite(${1:pinNumber}, ${2:value});"
         ],
@@ -41,9 +41,9 @@
     //  Function:   pinMode()
     //--------------------------------------------------
     "Pin Mode": {
-        "prefix": "Pin Mode",
+        "prefix": "pin Mode",
         "body": [
-            "pinMode(${1|INPUT,OUTPUT,INPUT_PULLUP|});"
+            "pinMode(${1:pinNumber}, ${2|INPUT,OUTPUT,INPUT_PULLUP|});"
         ],
         "description": "Configures the reference voltage used for digital input"
     },
@@ -52,7 +52,7 @@
     //  Function:   analogRead()
     //--------------------------------------------------
     "Analog Read": {
-        "prefix": "Analog Read",
+        "prefix": "analog Read",
         "body": [
             "analogRead(${1:analogPin});"
         ],
@@ -63,7 +63,7 @@
     //  Function:   analogWrite()
     //--------------------------------------------------
     "Analog Write": {
-        "prefix": "Analog Write",
+        "prefix": "analog Write",
         "body": [
             "analogWrite(${1:analogPin}, ${2:value});"
         ],
@@ -74,7 +74,7 @@
     //  Function:   analogReference()
     //--------------------------------------------------
     "Analog Reference": {
-        "prefix": "Analog Reference",
+        "prefix": "analog Reference",
         "body": [
             "analogReference(${1|DEFAULT,EXTERNAL,INTERNAL,INTERNAL1V1,INTERNAL2V56|});"
         ],
@@ -85,7 +85,7 @@
     //  Function:   analogReadResolution()
     //--------------------------------------------------
     "Analog Read Resolution": {
-        "prefix": "Analog Read Resolution",
+        "prefix": "analog Read Resolution",
         "body": [
             "analogReadResolution(${1|10,12,16,8|});"
         ],
@@ -96,7 +96,7 @@
     //  Function:   analogWriteResolution()
     //--------------------------------------------------
     "Analog Write Resolution": {
-        "prefix": "Analog Write Resolution",
+        "prefix": "analog Write Resolution",
         "body": [
             "analogWriteResolution(${1|10,12,16,8|});"
         ],
@@ -107,7 +107,7 @@
     //  Function:   noTone()
     //--------------------------------------------------
     "No Tone": {
-        "prefix": "No Tone",
+        "prefix": "no Tone",
         "body": [
             "noTone(${1:pinNumber});"
         ],

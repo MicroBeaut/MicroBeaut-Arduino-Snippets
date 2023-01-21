@@ -26,7 +26,7 @@
 - shiftIn()
 - shiftOut()
 - tone()
-<\br>
+</br>
 
 # License
 
