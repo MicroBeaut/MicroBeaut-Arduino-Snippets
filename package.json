@@ -2,7 +2,7 @@
   "name": "microbeaut-arduino-snippets",
   "displayName": "MicroBeaut Arduino Snippets",
   "description": "Code Snippets for Arduino",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "MicroBeaut",
   "icon": "images/microbeaut-logo.png",
   "engines": {
@@ -13,27 +13,21 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [
-      {
-        "id": "arduino",
-        "aliases": ["Arduino"],
+    "languages": [{
+        "id": "ino",
+        "aliases": ["Arduino","ino"],
         "extensions": [".ino"],
         "configuration": "./language-configuration.json"
-      }
-    ],
-    "grammars": [
-      {
-        "language": "arduino",
+      }],
+    "grammars": [{
+        "language": "ino",
         "scopeName": "source.ino",
-        "path": "./syntaxes/arduino.tmLanguage.json"
-      }
-    ],
-    "snippets": [
-      {
-        "language": "arduino",
-        "path": "./snippets/arduino.code-snippets"
-      }
-    ]
+        "path": "./syntaxes/ino.tmLanguage.json"
+      }],
+    "snippets": [{
+        "language": "ino",
+        "path": "./snippets/ino.code-snippets"
+      }]
   },
   "license": "MIT",
   "repository": {

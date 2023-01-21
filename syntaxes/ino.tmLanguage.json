@@ -1,7 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Arduino",
-	"scopeName": "source.ino",
 	"patterns": [
 		{
 			"include": "#variable-qualifiers"
@@ -68,7 +67,7 @@
 		"variable-qualifiers": {
 			"patterns": [
 				{
-					"name": "storage.type.arduino",
+					"name": "storage.type.ino",
 					"match": "\\b(const|scope|static|volatile)\\b"
 				}
 			]
@@ -76,7 +75,7 @@
 		"variable-utilities": {
 			"patterns": [
 				{
-					"name": "storage.type.arduino",
+					"name": "storage.type.ino",
 					"match": "\\b(PROGMEM|sizeof)\\b"
 				}
 			]
@@ -84,15 +83,15 @@
 		"variable-constants": {
 			"patterns": [
 				{
-					"name": "constant.numeric.arduino",
+					"name": "constant.numeric.ino",
 					"match": "\\b(HIGH|LOW|true|false)\\b"
 				},
 				{
-					"name": "support.constant.digital.arduino",
+					"name": "support.constant.digital.ino",
 					"match": "\\b(INPUT|OUTPUT|INPUT_PULLUP|LED_BUILTIN)\\b"
 				},
 				{
-					"name": "constant.numeric.arduino",
+					"name": "constant.numeric.ino",
 					"match": "-?\\b((0(b|B)[0-1]*)|(0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f)?\\b"
 				}
 			]
@@ -100,7 +99,7 @@
 		"variable-datatypes": {
 			"patterns": [
 				{
-					"name": "support.type.datatypes.arduino",
+					"name": "support.type.datatypes.ino",
 					"match": "\\b(array|bool|boolean|byte|char|double|float|int|long|short|size_t|string|String|unsigned char|unsigned int|unsigned long|void|word)\\b"
 				}
 			]
@@ -108,7 +107,7 @@
 		"function-digital-io": {
 			"patterns": [
 				{
-					"name": "keyword.control.digital.arduino",
+					"name": "keyword.control.digital.ino",
 					"match": "\\b(digitalRead|digitalWrite|pinMode)\\b"
 				}
 			]
@@ -116,11 +115,11 @@
 		"function-analog-io": {
 			"patterns": [
 				{
-					"name": "keyword.control.analog.arduino",
+					"name": "keyword.control.analog.ino",
 					"match": "\\b(analogRead|analogWrite|analogReference)\\b"
 				},
 				{
-					"name": "variable.parameter.function.analog.reference.arduino",
+					"name": "variable.parameter.function.analog.reference.ino",
 					"match": "\\b(DEFAULT|EXTERNAL|INTERNAL|INTERNAL1V1|INTERNAL2V56)\\b"
 				}
 			]
@@ -128,7 +127,7 @@
 		"function-other-family": {
 			"patterns": [
 				{
-					"name": "keyword.control.analog.resolution.arduino",
+					"name": "keyword.control.analog.resolution.ino",
 					"match": "\\b(analogReadResolution|analogWriteResolution)\\b"
 				}
 			]
@@ -136,7 +135,7 @@
 		"function-advanced-io": {
 			"patterns": [
 				{
-					"name": "keyword.control.advanced.arduino",
+					"name": "keyword.control.advanced.ino",
 					"match": "\\b(noTone|pulseIn|pulseInLong|shiftIn|shiftOut|tone)\\b"
 				}
 			]
@@ -144,7 +143,7 @@
 		"function-time": {
 			"patterns": [
 				{
-					"name": "keyword.control.time.arduino",
+					"name": "keyword.control.time.ino",
 					"match": "\\b(delay|delayMicroseconds|micros|millis)\\b"
 				}
 			]
@@ -152,7 +151,7 @@
 		"function-match": {
 			"patterns": [
 				{
-					"name": "keyword.control.math.arduino",
+					"name": "keyword.control.math.ino",
 					"match": "\\b(abs|constrain|map|max|min|pow|sq|sqrt)\\b"
 				}
 			]
@@ -160,7 +159,7 @@
 		"function-trigonometry": {
 			"patterns": [
 				{
-					"name": "keyword.control.trigonometry.arduino",
+					"name": "keyword.control.trigonometry.ino",
 					"match": "\\b(cos|sin|tan)\\b"
 				}
 			]
@@ -168,7 +167,7 @@
 		"function-characters": {
 			"patterns": [
 				{
-					"name": "keyword.control.characters.arduino",
+					"name": "keyword.control.characters.ino",
 					"match": "\\b(isAlpha|isAlphaNumeric|isAscii|isControl|isDigit|isGraph|isHexadecimalDigit|isLowerCase|isPrintable|isPunct|isSpace|isUpperCase|isWhitespace)\\b"
 				}
 			]
@@ -176,7 +175,7 @@
 		"function-random-numbers": {
 			"patterns": [
 				{
-					"name": "keyword.control.random.numbers.arduino",
+					"name": "keyword.control.random.numbers.ino",
 					"match": "\\b(random|randomSeed)\\b"
 				}
 			]
@@ -184,7 +183,7 @@
 		"function-bits-bytes": {
 			"patterns": [
 				{
-					"name": "keyword.control.bits.bytes.arduino",
+					"name": "keyword.control.bits.bytes.ino",
 					"match": "\\b(bit|bitClear|bitRead|bitSet|bitWrite|highByte|lowByte)\\b"
 				}
 			]
@@ -192,7 +191,7 @@
 		"function-external-interrupts": {
 			"patterns": [
 				{
-					"name": "keyword.control.external.interrupts.arduino",
+					"name": "keyword.control.external.interrupts.ino",
 					"match": "\\b(attachInterrupt|detachInterrupt)\\b"
 				}
 			]
@@ -200,7 +199,7 @@
 		"function-interrupts": {
 			"patterns": [
 				{
-					"name": "keyword.control.interrupts.arduino",
+					"name": "keyword.control.interrupts.ino",
 					"match": "\\b(interrupts|noInterrupts)\\b"
 				}
 			]
@@ -208,7 +207,7 @@
 		"function-communication": {
 			"patterns": [
 				{
-					"name": "keyword.control.communication.arduino",
+					"name": "keyword.control.communication.ino",
 					"match": "\\b(Serial|SPI|Stream|Wire)\\b"
 				}
 			]
@@ -216,7 +215,7 @@
 		"function-usb": {
 			"patterns": [
 				{
-					"name": "keyword.control.usb.arduino",
+					"name": "keyword.control.usb.ino",
 					"match": "\\b(Keyboard|Mouse)\\b"
 				}
 			]
@@ -224,65 +223,66 @@
 		"expression-operators": {
 			"patterns": [
 				{
-					"name": "keyword.operator.assignment.compound.arduino",
+					"name": "keyword.operator.assignment.compound.ino",
 					"match": "\\*=|/=|%=|\\+=|-=|\\?\\?="
 				},
 				{
-					"name": "keyword.operator.assignment.compound.bitwise.arduino",
+					"name": "keyword.operator.assignment.compound.bitwise.ino",
 					"match": "\\&=|\\^=|<<=|>>=|\\|="
 				},
 				{
-					"name": "keyword.operator.bitwise.shift.arduino",
+					"name": "keyword.operator.bitwise.shift.ino",
 					"match": "<<|>>"
 				},
 				{
-					"name": "keyword.operator.comparison.arduino",
+					"name": "keyword.operator.comparison.ino",
 					"match": "==|!="
 				},
 				{
-					"name": "keyword.operator.relational.arduino",
+					"name": "keyword.operator.relational.ino",
 					"match": "<=|>=|<|>"
 				},
 				{
-					"name": "keyword.operator.logical.arduino",
+					"name": "keyword.operator.logical.ino",
 					"match": "\\!|&&|\\|\\|"
 				},
 				{
-					"name": "keyword.operator.bitwise.arduino",
+					"name": "keyword.operator.bitwise.ino",
 					"match": "\\&|~|\\^|\\|"
 				},
 				{
-					"name": "keyword.operator.assignment.arduino",
+					"name": "keyword.operator.assignment.ino",
 					"match": "\\="
 				},
 				{
-					"name": "keyword.operator.decrement.arduino",
+					"name": "keyword.operator.decrement.ino",
 					"match": "--"
 				},
 				{
-					"name": "keyword.operator.increment.arduino",
+					"name": "keyword.operator.increment.ino",
 					"match": "\\+\\+"
 				},
 				{
-					"name": "keyword.operator.arithmetic.arduino",
+					"name": "keyword.operator.arithmetic.ino",
 					"match": "%|\\*|/|-|\\+"
 				},
 				{
-					"name": "keyword.operator.null-coalescing.arduino",
+					"name": "keyword.operator.null-coalescing.ino",
 					"match": "\\?\\?"
 				}
 			]
 		},
 		"strings": {
-			"name": "string.quoted.double.arduino",
+			"name": "string.quoted.double.ino",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.arduino",
+					"name": "constant.character.escape.ino",
 					"match": "\\\\."
 				}
 			]
 		}
-	}
+	},
+	"scopeName": "source.ino"
 }

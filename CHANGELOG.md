@@ -6,7 +6,10 @@ All notable changes to the "Microbeaut Arduino Snippets" extension will be docum
 
 - Initial release
 
-
 ## [0.0.2]
 
-- Fixed the pinMode missing pin parameter.
+- Fixed the pinMode missing pin parameter
+
+## [0.0.3]
+
+- Changed languages Id
