@@ -2,8 +2,8 @@
     //--------------------------------------------------
     //  New 
     //--------------------------------------------------
-    "New": {
-        "prefix": "New",
+    "Arduino Setup...Loop...": {
+        "prefix": "Arduino Setup Loop",
         "body": [
             "void setup() {",
             "\t$0",
@@ -12,7 +12,7 @@
             "\t",
             "}"
         ],
-        "description": "Reads the value from a specified digital pin"
+        "description": "Arduino Setup Loop"
     },
     //--------------------------------------------------
     //  Digiral I/O
@@ -167,5 +167,158 @@
             "shiftIn(${1:pinOu}, ${2:frequency}${3:, ${4:duration}});"
         ],
         "description": "Generates a square wave of the specified frequency (and 50% duty cycle) on a pin"
+    },
+    //--------------------------------------------------
+    //  Iteration Statements
+    //  Statement:  do...
+    //--------------------------------------------------
+    "While...": {
+        "prefix": "while ",
+        "body": [
+            "while(${1:expression}) {",
+            "\t// TODO: STATEMENTS \n\t$0",
+            "}"
+        ],
+        "description": "Executes statement repeatedly until expression evaluates to zero"
+    },
+    //--------------------------------------------------
+    //  Iteration Statements
+    //  Statement:  do...while
+    //--------------------------------------------------
+    "Do...While": {
+        "prefix": "do while",
+        "body": [
+            "do {",
+            "\t// TODO: STATEMENTS \n\t$0",
+            "while(${1:expression});"
+        ],
+        "description": "Executes a statement repeatedly until the specified termination condition (the expression) evaluates to zero"
+    },
+    //--------------------------------------------------
+    //  Iteration Statements
+    //  Statement:  for...
+    //--------------------------------------------------
+    "For...": {
+        "prefix": "for ",
+        "body": [
+            "for (${1|int,char,double,float,long,short,size_t,unsigned char,unsigned int,unsigned long,word|} ${2:counter} = ${3:init} ; ${2:counter} ${4|<,<=,==,!=,>=,>|} ${5:value} ; ${6:${2:counter}++}) {",
+            "\t// TODO: STATEMENTS \n\t$0",
+            "}"
+        ],
+        "description": "Executes a statement repeatedly until the condition becomes fals"
+    },
+    //--------------------------------------------------
+    //  Iteration Statements
+    //  Statement:  break;
+    //--------------------------------------------------
+    "Break": {
+        "prefix": "break",
+        "body": [
+            "break;$0"
+        ],
+        "description": "Break statement"
+    },
+    //--------------------------------------------------
+    //  Iteration Statements
+    //  Statement:  continue;
+    //--------------------------------------------------
+    "continue": {
+        "prefix": "continue",
+        "body": [
+            "continue;$0"
+        ],
+        "description": "Continue statement"
+    },
+    //--------------------------------------------------
+    //  Iteration Statements
+    //  Statement:  goto ;
+    //--------------------------------------------------
+    "goto": {
+        "prefix": "goto ",
+        "body": [
+            "goto ${1:identifier};$0"
+        ],
+        "description": "Goto statement"
+    },
+    //--------------------------------------------------
+    //  Iteration Statements
+    //  Statement:  return;
+    //--------------------------------------------------
+    "return": {
+        "prefix": "return ",
+        "body": [
+            "return ${1:expression};$0"
+        ],
+        "description": "Return statement"
+    },
+    //--------------------------------------------------
+    //  Iteration Statements
+    //  Statement:  switch case...
+    //--------------------------------------------------
+    "Switch...": {
+        "prefix": "switch case",
+        "body": [
+            "switch (${1:testexpression}) {",
+            "\tcase ${2:expression}:",
+            "\t\t// TODO: STATEMENTS",
+            "\t\t$0${3:\n\tdefault:\n\t\t// TODO: DEFAULT STATEMENTS\n\t\t}",
+            "}"
+        ],
+        "description": "Executes one of several groups of statements, depending on the value of an expression."
+    },
+    //--------------------------------------------------
+    //  Iteration Statements
+    //  Statement:  switch case...
+    //--------------------------------------------------
+    "case...": {
+        "prefix": "case ",
+        "body": [
+            "case ${2:expression}:",
+            "\t// TODO: STATEMENTS",
+            "\t$0"
+        ],
+        "description": "Executes one of several groups of statements, depending on the value of an expression."
+    },
+    //--------------------------------------------------
+    //  Iteration Statements
+    //  Statement:  if...
+    //--------------------------------------------------
+    "If...": {
+        "prefix": "if ",
+        "body": [
+            "if (${1:varName} ${2|==,!=,<,<=,>,>=|} ${3:value} ) {",
+            "\t// TODO: STATEMENTS",
+            "\t$0",
+            "}"
+        ],
+        "description": "Conditionally executes a group of statements, depending on the value of an expression."
+    },
+    //--------------------------------------------------
+    //  Iteration Statements
+    //  Statement:  else if...
+    //--------------------------------------------------
+    "Else If...": {
+        "prefix": "else if",
+        "body": [
+            "else if (${1:varName} ${2|==,!=,<,<=,>,>=|} ${3:value} ) {",
+            "\t// TODO: STATEMENTS",
+            "\t$0",
+            "}"
+        ],
+        "description": "Conditionally executes a group of statements, depending on the value of an expression."
+    },
+    //--------------------------------------------------
+    //  Iteration Statements
+    //  Statement:  else...
+    //--------------------------------------------------
+    "Else...": {
+        "prefix": "else ",
+        "body": [
+            "else {",
+            "\t// TODO: STATEMENTS",
+            "\t$0",
+            "}"
+        ],
+        "description": "Conditionally executes a group of statements, depending on the value of an expression."
     }
 }

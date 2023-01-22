@@ -13,3 +13,7 @@ All notable changes to the "Microbeaut Arduino Snippets" extension will be docum
 ## [0.0.3]
 
 - Changed languages Id
+
+## [0.0.4]
+
+- Added statments

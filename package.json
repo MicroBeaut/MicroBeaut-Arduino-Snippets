@@ -2,37 +2,49 @@
   "name": "microbeaut-arduino-snippets",
   "displayName": "MicroBeaut Arduino Snippets",
   "description": "Code Snippets for Arduino",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "MicroBeaut",
   "icon": "images/microbeaut-logo.png",
   "engines": {
     "vscode": "^1.74.0"
-  },
-  "categories": [
-    "Snippets",
-    "Programming Languages"
-  ],
-  "contributes": {
-    "languages": [{
-        "id": "ino",
-        "aliases": ["Arduino","ino"],
-        "extensions": [".ino"],
-        "configuration": "./language-configuration.json"
-      }],
-    "grammars": [{
-        "language": "ino",
-        "scopeName": "source.ino",
-        "path": "./syntaxes/ino.tmLanguage.json"
-      }],
-    "snippets": [{
-        "language": "ino",
-        "path": "./snippets/ino.code-snippets"
-      }]
   },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/MicroBeaut/MicroBeaut-Arduino-Snippets"
   },
-  "qna": "https://github.com/MicroBeaut/MicroBeaut-Arduino-Snippets/discussions"
+  "homepage": "https://github.com/MicroBeaut/MicroBeaut-Arduino-Snippets",
+  "qna": "https://github.com/MicroBeaut/MicroBeaut-Arduino-Snippets/discussions",
+  "categories": [
+    "Snippets",
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "cpp",
+        "extensions": [
+          ".ino"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "cpp",
+        "scopeName": "source.cpp.arduino",
+        "path": "./syntaxes/arduino.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "cpp",
+        "path": "./snippets/arduino.code-snippets"
+      },
+      {
+        "language": "c",
+        "path": "./snippets/arduino.code-snippets"
+      }
+    ]
+  }
 }
